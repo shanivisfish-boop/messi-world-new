@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071b3a">
+<title>Messi World ⚽🐐</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #06152e, #0b2f63 45%, #eef6ff);
+  color: #10213d;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(4, 18, 45, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  max-width: 1100px;
+  margin: auto;
+}
+
+nav a,
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 11px 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background: #164b91;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  background: #2c6fc3;
+}
+
+.hero {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 50px 18px;
+  color: white;
+  background: radial-gradient(circle at top, #2b76d2, #071b3a 65%);
+}
+
+.hero h1 {
+  font-size: clamp(42px, 9vw, 82px);
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 28px 16px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 22px;
+  margin: 16px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.stat {
+  background: linear-gradient(135deg, #e8f2ff, #fff);
+  border-radius: 20px;
+  padding: 18px;
+  text-align: center;
+}
+
+.stat b {
+  font-size: 28px;
+  display: block;
+  color: #174f9b;
+}
+
+.video {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #111;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: #1764c0;
+  color: white;
+}
+
+.secondary {
+  background: #dcecff;
+  color: #123d73;
+}
+
+.game {
+  border: 2px solid #dbeaff;
+}
+
+.question {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.45;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.answers button {
+  background: #eaf3ff;
+  color: #123d73;
+}
+
+.answers button:hover {
+  background: #cfe4ff;
+}
+
+.result {
+  min-height: 28px;
+  font-weight: bold;
+  margin-top: 14px;
+}
+
+.scorebox {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.pill {
+  background: #09244c;
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #49617e;
+}
+
+.small {
+  color: #60738c;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<a href="#home">🏠 בית</a>
+<a href="#about">🐐 מסי</a>
+<a href="#career">🏆 קריירה</a>
+<a href="#videos">🎬 סרטונים</a>
+<a href="#games">🎮 משחקים</a>
+
+<button id="soundBtn" class="primary" type="button">
+🔊 סאונד: פעיל
+</button>
+
+</nav>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+
+<div>
+
+<div style="font-size:70px">
+⚽🐐🇦🇷
+</div>
+
+<h1>Messi World</h1>
+
+<p>
+העולם של ליאו מסי — עובדות, קריירה,
+סרטונים ומשחקים קטנים שאפשר לשחק ישר באתר.
+</p>
+
+<div class="controls" style="justify-content:center">
+
+<button
+class="primary"
+onclick="document.getElementById('games').scrollIntoView()">
+🎮 לשחק עכשיו
+</button>
+
+<button
+class="secondary"
+onclick="toggleSound()">
+🔊 סאונד
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about" class="container">
+
+<h2>🐐 על מסי</h2>
+
+<div class="card">
+
+<p>
+<b>ליאונל אנדרס מסי</b>
+נולד ב־24 ביוני 1987 ברוסאריו, ארגנטינה.
+הוא משחק בעמדת חלוץ/שחקן התקפה,
+מזוהה עם רגל שמאל, ולבש את המספר 10
+בנבחרת ארגנטינה ובאינטר מיאמי.
+</p>
+
+<div class="grid">
+
+<div class="stat">
+<b>8</b>
+כדורי זהב
+</div>
+
+<div class="stat">
+<b>10</b>
+אליפויות לה ליגה עם ברצלונה
+</div>
+
+<div class="stat">
+<b>4</b>
+זכיות בליגת האלופות
+</div>
+
+<div class="stat">
+<b>2022</b>
+אלוף העולם עם ארגנטינה
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="career" class="container">
+
+<h2>🏆 הקריירה</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🔵🔴 ברצלונה</h3>
+
+<p>
+השנים הגדולות של מסי בברצלונה כללו
+אינספור שערים, תארים ורגעים בלתי נשכחים.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🔵🔴 פריז סן־ז'רמן</h3>
+
+<p>
+מסי שיחק בפריז סן־ז'רמן בשנים 2021–2023
+וזכה איתה באליפויות צרפת.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🩷🖤 אינטר מיאמי</h3>
+
+<p>
+מאז 2023 מסי משחק באינטר מיאמי
+וממשיך להוביל את הקבוצה על המגרש.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🇦🇷 ארגנטינה</h3>
+
+<p>
+עם הנבחרת זכה בקופה אמריקה ובמונדיאל 2022,
+והפך לאחד הסמלים הגדולים בתולדות
+הכדורגל הארגנטינאי.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="videos" class="container">
+
+<h2>🎬 סרטונים</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🔥 השערים של מסי בברצלונה</h3>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/vkEVH-FVNU4"
+title="Messi Barcelona goals"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏆 כל השערים של מסי במונדיאל 2022</h3>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/olq9q-HeUc0"
+title="Messi World Cup 2022 goals"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+<p class="small">
+הסרטונים מוטמעים מ־YouTube.
+אם סרטון לא נטען, אפשר לפתוח אותו ישירות ב־YouTube.
+</p>
+
+</section>
+
+
+<section id="games" class="container">
+
+<h2>🎮 משחקים</h2>
+
+<div class="scorebox">
+
+<div class="pill">
+⭐ ניקוד:
+<span id="score">0</span>
+</div>
+
+<div class="pill">
+🏅 שיא:
+<span id="highScore">0</span>
+</div>
+
+</div>
+
+
+<!-- GAME 1 -->
+
+<div class="card game">
+
+<h3>1. 🧠 חידון מסי</h3>
+
+<div id="quizQuestion" class="question"></div>
+
+<div id="quizAnswers" class="answers"></div>
+
+<div id="quizResult" class="result"></div>
+
+<button
+class="secondary"
+onclick="nextQuiz()">
+➡️ שאלה הבאה
+</button>
+
+</div>
+
+
+<!-- GAME 2 -->
+
+<div class="card game">
+
+<h3>2. 🇦🇷 נכון או לא נכון</h3>
+
+<p id="tfQuestion" class="question"></p>
+
+<div class="answers">
+
+<button onclick="answerTF(true)">
+✅ נכון
+</button>
+
+<button onclick="answerTF(false)">
+❌ לא נכון
+</button>
+
+</div>
+
+<div id="tfResult" class="result"></div>
+
+</div>
+
+
+<!-- GAME 3 -->
+
+<div class="card game">
+
+<h3>3. 🎯 פנדל</h3>
+
+<p class="question">
+בחרי פינה לשער:
+</p>
+
+<div class="answers">
+
+<button onclick="penalty('left')">
+⬅️ שמאל
+</button>
+
+<button onclick="penalty('center')">
+⬆️ מרכז
+</button>
+
+<button onclick="penalty('right')">
+➡️ ימין
+</button>
+
+</div>
+
+<div id="penaltyResult" class="result"></div>
+
+</div>
+
+
+<!-- GAME 4 -->
+
+<div class="card game">
+
+<h3>4. ⚡ מבחן
